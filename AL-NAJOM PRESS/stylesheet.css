@@ -1,0 +1,163 @@
+.marquee {
+    background-color: rgb(40, 40, 41);
+    color: rgb(255, 255, 255);
+  overflow: hidden;
+  width: 100%;
+  height: 35px;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.track:hover,
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+
+.logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin-top:20px;
+
+    font-size:42px;
+    font-weight:bold;
+    font-family:Arial,sans-serif;
+    letter-spacing:3px;
+
+    background:linear-gradient(
+        90deg,
+        #ff0000,
+        #ff7300,
+        #ffd700,
+        #00ff99,
+        #00d9ff,
+        #0066ff,
+        #8a2be2,
+        #ff1493
+    );
+
+    background-size:400%;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    animation:
+        rotateLogo 5s linear infinite,
+        gradientMove 6s linear infinite;
+}
+.logo:hover {
+    animation-play-state: paused;
+    transform: perspective(1000px) rotateY(0deg) !important;
+}
+
+@keyframes rotateLogo{
+    from{
+        transform:perspective(1000px) rotateY(0deg);
+    }
+    to{
+        transform:perspective(1000px) rotateY(360deg);
+    }
+}
+
+@keyframes gradientMove{
+    from{
+        background-position:0;
+    }
+    to{
+        background-position:400%;
+    }
+}
+
+
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 30px;
+    overflow: hidden;
+    padding: 30px;
+}
+.carde{
+  width: 50%;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  text-align: center;
+  transition: 0.3s;
+}
+.carde img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+.track{
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: slider 20s linear infinite;
+}
+.track:hover{
+    animation-play-state: paused;
+}
+@keyframes slider{
+    from{
+        transform: translateX(0);
+    }
+
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+
+
+
+
+footer {
+    background-color: #0a0a0a;
+    color: #ffffff;
+    padding: 40px 20px;
+
+  
+}
+
+
+
+main {
+    flex: 1; 
+}
+
+
+
+.fot{
+   text-align: center;
+   font-size: 40px;
+   color: #ff7300;
+}
+.fot2{
+   text-align: center;
+   color:rgb(7, 217, 199) ;
+}
+
+
+
+
+.facebook{
+    
+}
